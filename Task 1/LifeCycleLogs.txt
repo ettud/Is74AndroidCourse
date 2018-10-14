@@ -1,0 +1,16 @@
+2018-10-13 22:49:47.534 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onCreate is called
+2018-10-13 22:49:47.831 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onStart is called
+2018-10-13 22:49:47.835 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onResume is called
+2018-10-13 22:49:54.804 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onPause is called
+2018-10-13 22:49:54.871 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onStop is called
+2018-10-13 22:49:55.615 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onRestart is called
+2018-10-13 22:49:55.616 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onStart is called
+2018-10-13 22:49:55.616 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onResume is called
+2018-10-13 22:49:56.193 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onPause is called
+2018-10-13 22:49:56.720 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onStop is called
+2018-10-13 22:49:57.817 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onRestart is called
+2018-10-13 22:49:57.818 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onStart is called
+2018-10-13 22:49:57.818 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onResume is called
+2018-10-13 22:49:58.496 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onPause is called
+2018-10-13 22:49:58.993 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onStop is called
+2018-10-13 22:49:58.994 28116-28116/com.ettud.is74ltask1 V/LifeCycleLogs: onDestroy is called
