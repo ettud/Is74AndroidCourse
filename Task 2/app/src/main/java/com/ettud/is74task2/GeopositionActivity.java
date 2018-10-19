@@ -63,23 +63,26 @@ public class GeopositionActivity extends AppCompatActivity implements Permission
 
     @Override
     public void onMapReady(final MapboxMap mapboxMap) {
-        mMap = mapboxMap;
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(55.1891368, 61.3568625)).title("Бизнес-центр \"Эталон\"").snippet("Штаб-квартира Интерсвязи")
-        );
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(55.1774669, 61.3188811)).title("ЧелГУ").snippet("Курсы Интерсвязи")
-        );
+        if(mMap == null) {
+            mMap = mapboxMap;
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(55.1891368, 61.3568625)).title("Бизнес-центр \"Эталон\"").snippet("Штаб-квартира Интерсвязи")
+            );
+            mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(55.1774669, 61.3188811)).title("ЧелГУ").snippet("Курсы Интерсвязи")
+            );
+            mMap.getUiSettings().setZoomControlsEnabled(true);
+            mapboxMap.getUiSettings().setZoomGesturesEnabled(true);
+            mapboxMap.getUiSettings().setScrollGesturesEnabled(true);
+            mapboxMap.getUiSettings().setAllGesturesEnabled(true);
+        }
         enableLocationPlugin();
-        mLocationLayerPlugin = new LocationLayerPlugin(mMapView, mMap, mLocationEngine);
-        mLocationLayerPlugin.setLocationLayerEnabled(true);
-        mLocationLayerPlugin.setCameraMode(CameraMode.TRACKING);
-        mLocationLayerPlugin.setRenderMode(RenderMode.COMPASS);
-        getLifecycle().addObserver(mLocationLayerPlugin);
-        mMap.getUiSettings().setZoomControlsEnabled(true);
-        mapboxMap.getUiSettings().setZoomGesturesEnabled(true);
-        mapboxMap.getUiSettings().setScrollGesturesEnabled(true);
-        mapboxMap.getUiSettings().setAllGesturesEnabled(true);
+        if(mLocationEngine != null){
+            locationLayerPluginLaunch();
+        }
+        else{
+            mLocationLayerPlugin = null;
+        }
     }
 
     @Override
@@ -175,18 +178,23 @@ public class GeopositionActivity extends AppCompatActivity implements Permission
             locationEngineLaunch();
             return;
         }
-        Toast.makeText(this, R.string.geolocation_access_denied, Toast.LENGTH_LONG).show();
+        else {
+            Toast.makeText(this, R.string.geolocation_access_denied, Toast.LENGTH_LONG).show();
+        }
         finish();
     }
 
     @SuppressLint("MissingPermission")
     void locationEngineLaunch(){
         if (PermissionsManager.areLocationPermissionsGranted(this)) {
-            mLocationEngine = new LocationEngineProvider(this).obtainBestLocationEngineAvailable();
-            mLocationEngine.requestLocationUpdates();
-            mLocationEngine.setPriority(LocationEnginePriority.BALANCED_POWER_ACCURACY);
-            mLocationEngine.setInterval(0);
-            mLocationEngine.activate();
+            if(mLocationEngine == null) {
+                mLocationEngine = new LocationEngineProvider(this).obtainBestLocationEngineAvailable();
+                mLocationEngine.requestLocationUpdates();
+                mLocationEngine.setPriority(LocationEnginePriority.BALANCED_POWER_ACCURACY);
+                mLocationEngine.setInterval(0);
+                mLocationEngine.activate();
+            }
+            locationLayerPluginLaunch();
             getLastLocation();
         }
     }
@@ -201,6 +209,19 @@ public class GeopositionActivity extends AppCompatActivity implements Permission
             } else {
                 mLocationEngine.addLocationEngineListener(this);
                 mLocationEngine.requestLocationUpdates();
+            }
+        }
+    }
+
+    @SuppressLint("MissingPermission")
+    void locationLayerPluginLaunch(){
+        if (PermissionsManager.areLocationPermissionsGranted(this)) {
+            if(mLocationLayerPlugin == null) {
+                mLocationLayerPlugin = new LocationLayerPlugin(mMapView, mMap, mLocationEngine);
+                mLocationLayerPlugin.setLocationLayerEnabled(true);
+                mLocationLayerPlugin.setCameraMode(CameraMode.TRACKING);
+                mLocationLayerPlugin.setRenderMode(RenderMode.COMPASS);
+                getLifecycle().addObserver(mLocationLayerPlugin);
             }
         }
     }
