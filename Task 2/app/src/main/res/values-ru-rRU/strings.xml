@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_battery">Батарея</string>
+    <string name="button_geoposition">Геопозиция</string>
+    <string name="geolocation_access_denied">Доступ к местоположению запрещён</string>
+</resources>

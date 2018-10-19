@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">Tracker</string>
+    <string name="map_box_access_token" translatable="false">pk.eyJ1IjoiZXR0dWQiLCJhIjoiY2puZGI5ZjVzMDY2bzN2bm1oZ3lwNHZoMCJ9.Y9N3XBhr6Vnnj3bidttBAg</string>
+    <string name="button_battery">Battery</string>
+    <string name="button_geoposition">Geoposition</string>
+    <string name="geolocation_access_denied">Access to geolocation is denied.</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>
