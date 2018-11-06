@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">Tracker</string>
+    <string name="map_box_access_token" translatable="false">pk.eyJ1IjoiZXR0dWQiLCJhIjoiY2puZGI5ZjVzMDY2bzN2bm1oZ3lwNHZoMCJ9.Y9N3XBhr6Vnnj3bidttBAg</string>
+    <string name="button_battery">Battery</string>
+    <string name="button_geoposition">Geoposition</string>
+    <string name="geolocation_access_denied">Access to geolocation is denied.</string>
+    <string name="battery_temp_unknown">Battery temperature is unknown</string>
+    <string name="battery_aver_current_label">Average currency</string>
+    <string name="battery_cur_current_label">Current currency</string>
+    <string name="battery_current_unkown">Current nor average currency is known</string>
+    <string name="button_wiki">Wiki</string>
+</resources>
