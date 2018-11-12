@@ -43,6 +43,5 @@ dependencies {
     implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.5.3'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-moshi:2.4.0'
-    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
 }

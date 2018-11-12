@@ -1,10 +1,8 @@
 package com.ettud.is74task4;
 
-import com.ettud.is74task4.Models.MyObjectBox;
-import com.jakewharton.threetenabp.AndroidThreeTen;
+import com.ettud.is74task4.Models.database.MyObjectBox;
 
 import io.objectbox.BoxStore;
-import io.objectbox.ModelBuilder;
 
 public class App extends android.app.Application {
     private static App sApp;
@@ -14,7 +12,6 @@ public class App extends android.app.Application {
     public void onCreate(){
         super.onCreate();
         sApp = this;
-        AndroidThreeTen.init(this);
         mBoxStore = MyObjectBox.builder().androidContext(this).build();
     }
 

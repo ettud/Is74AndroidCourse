@@ -7,5 +7,5 @@
     <string name="battery_aver_current_label">Средняя сила тока</string>
     <string name="battery_cur_current_label">Текущая сила тока</string>
     <string name="battery_current_unkown">Ни текущая, ни средняя сила тока неизвестны</string>
-    <string name="button_wiki">Вики</string>
+    <string name="button_dictionary">Словарь</string>
 </resources>

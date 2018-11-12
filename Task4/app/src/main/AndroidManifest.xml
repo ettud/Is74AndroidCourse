@@ -23,7 +23,7 @@
         <activity android:name=".Activities.BatteryActivity" />
         <activity android:name=".Activities.GeopositionActivity" />
 
-        <activity android:name=".Activities.WikiActivity"></activity>
+        <activity android:name=".Activities.DictionaryActivity"></activity>
     </application>
 
 </manifest>

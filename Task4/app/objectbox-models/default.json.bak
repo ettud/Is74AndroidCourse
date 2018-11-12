@@ -4,39 +4,132 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "1:5668109862594625101",
-      "lastPropertyId": "4:2271377200200413811",
-      "name": "UserOnlineTime",
+      "id": "2:3274394039148382729",
+      "lastPropertyId": "3:4960630892236039673",
+      "name": "Term",
       "properties": [
         {
-          "id": "1:667418810700321700",
+          "id": "1:8746890485084757148",
+          "name": "id"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:1119162814723687373",
+      "lastPropertyId": "4:3044428653179373844",
+      "name": "Source",
+      "properties": [
+        {
+          "id": "1:1913955657936304468",
           "name": "id"
         },
         {
-          "id": "2:8270864704892503682",
-          "name": "userId"
+          "id": "3:79976246539707677",
+          "name": "priority"
         },
         {
-          "id": "3:2074596521294385765",
-          "name": "time"
+          "id": "4:3044428653179373844",
+          "name": "name"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:8119209166595871249",
+      "lastPropertyId": "3:1064725004407659653",
+      "name": "Definition",
+      "properties": [
+        {
+          "id": "1:8216114134371488969",
+          "name": "id"
         },
         {
-          "id": "4:2271377200200413811",
-          "name": "online"
+          "id": "2:7491172203408641679",
+          "name": "text"
+        },
+        {
+          "id": "3:1064725004407659653",
+          "indexId": "3:6682961217738706037",
+          "name": "termSourceId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:789093509120325054",
+      "lastPropertyId": "3:5313867918047428746",
+      "name": "TermSource",
+      "properties": [
+        {
+          "id": "1:5515403252775034229",
+          "name": "id"
+        },
+        {
+          "id": "2:1856341120719835043",
+          "indexId": "4:7188215396580536480",
+          "name": "termId"
+        },
+        {
+          "id": "3:5313867918047428746",
+          "indexId": "5:5905441452737230960",
+          "name": "sourceId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:1756051374995156162",
+      "lastPropertyId": "3:5532431147921642698",
+      "name": "TermSynonim",
+      "properties": [
+        {
+          "id": "1:6140431821786465486",
+          "name": "id"
+        },
+        {
+          "id": "2:7953573644224827606",
+          "name": "name"
+        },
+        {
+          "id": "3:5532431147921642698",
+          "indexId": "6:3012329638242644066",
+          "name": "termId"
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "1:5668109862594625101",
-  "lastIndexId": "0:0",
-  "lastRelationId": "0:0",
+  "lastEntityId": "7:1756051374995156162",
+  "lastIndexId": "6:3012329638242644066",
+  "lastRelationId": "2:3313183944270428425",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
-  "retiredEntityUids": [],
-  "retiredIndexUids": [],
-  "retiredPropertyUids": [],
-  "retiredRelationUids": [],
+  "retiredEntityUids": [
+    5668109862594625101,
+    5074664612474383636
+  ],
+  "retiredIndexUids": [
+    8408583625471295934,
+    8468404991131738875
+  ],
+  "retiredPropertyUids": [
+    667418810700321700,
+    8270864704892503682,
+    2074596521294385765,
+    2271377200200413811,
+    4960630892236039673,
+    1017248231940112304,
+    4381166857670847505,
+    6787345915347109875,
+    5337478346122885498,
+    2814750503119924672,
+    4617788355408216317
+  ],
+  "retiredRelationUids": [
+    3313183944270428425,
+    2751723645764100719
+  ],
   "version": 1
 }

@@ -8,5 +8,5 @@
     <string name="battery_aver_current_label">Average currency</string>
     <string name="battery_cur_current_label">Current currency</string>
     <string name="battery_current_unkown">Current nor average currency is known</string>
-    <string name="button_wiki">Wiki</string>
+    <string name="button_dictionary">Dictionary</string>
 </resources>
